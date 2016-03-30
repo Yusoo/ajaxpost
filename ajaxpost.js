@@ -1,5 +1,6 @@
 /*!
  * ajaxpost.js
+ * @version v1.0.0
  * @link https://github.com/Yusoo/ajaxpost
  * @author Yusoo
  * @email yusoo@qq.com
