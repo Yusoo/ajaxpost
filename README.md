@@ -11,15 +11,25 @@
 	<input type="submit" value="登录">
 	<p id="notification"></p>
 </form>
-//引入jquery
+
+//引入jquery和ajaxpost
 <script src="jquery.js"></script>
+<script src="ajaxpost.js"></script>
+
 <script>
 	$(function () {
 		$('#login').ajaxpost();
 	});
 </script>
 ```
-
+或者使用requireJS引入
+```js
+require(['ajaxpost'], function () {
+	$(function () {
+		$('#login').ajaxpost();
+	});
+});
+```
 
 #前端配置
 参数 | 说明

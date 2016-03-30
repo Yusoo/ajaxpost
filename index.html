@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="yusoo@qq.com">
+	<title>Ajaxpost</title>
+</head>
+<body>
+
+<form action="/login_ajax" method="post" id="login">
+	<input name="name" type="text" placeholder="用户名">
+	<input name="password" type="password" placeholder="密码">
+	<input type="submit">
+	<p id="notification"></p>
+</form>
+
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="ajaxpost.js"></script>
+
+<script>
+	$(function () {
+		$('#login').ajaxpost();
+	});
+</script>
+
+</body>
+</html>
