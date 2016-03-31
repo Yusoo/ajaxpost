@@ -6,10 +6,10 @@
 # 使用方法
 ```html
 <form action="/login_ajax" method="post" id="login">
-	<input name="name" type="text" placeholder="用户名">
-	<input name="password" type="password" placeholder="密码">
-	<input type="submit" value="登录">
-	<p id="notification"></p>
+    <input name="name" type="text" placeholder="用户名">
+    <input name="password" type="password" placeholder="密码">
+    <input type="submit" value="登录">
+    <p id="notification"></p>
 </form>
 
 //引入jquery和ajaxpost
@@ -17,17 +17,17 @@
 <script src="ajaxpost.js"></script>
 
 <script>
-	$(function () {
-		$('#login').ajaxpost();
-	});
+    $(function () {
+        $('#login').ajaxpost();
+    });
 </script>
 ```
 或者使用requireJS引入
 ```js
 require(['ajaxpost'], function () {
-	$(function () {
-		$('#login').ajaxpost();
-	});
+    $(function () {
+        $('#login').ajaxpost();
+    });
 });
 ```
 
@@ -42,12 +42,12 @@ func | 定义数据成功返回后要执行的js代码
 例子
 ```js
 $('#login').ajaxpost({
-	notice: '#tips', //在#tips元素上显示提示信息
-	func: function (data) { //后端没有返回登录成功的状态，自动点击刷新验证码（如果有的话）
-		if (data.status !== 'succeed') {
-			$('.vcode').trigger('click');
-		}
-	}
+    notice: '#tips', //在#tips元素上显示提示信息
+    func: function (data) { //后端没有返回登录成功的状态，自动点击刷新验证码（如果有的话）
+        if (data.status !== 'succeed') {
+            $('.vcode').trigger('click');
+        }
+    }
 });
 ```
 
@@ -84,11 +84,11 @@ script | 要执行的js代码
 ajaxpost也可用于非表单的请求，后端同样可以控制浏览器行为。
 ```js
 $('#abc').click(function () {
-	$(this).ajaxpost({
-		action: '/something',
-		notice: '#note',
-		datas: { name: 'Yusoo', age:7 }
-	});
+    $(this).ajaxpost({
+        action: '/something',
+        notice: '#note',
+        datas: { name: 'Yusoo', age:7 }
+    });
 });
 ```
 
